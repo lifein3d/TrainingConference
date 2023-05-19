@@ -1,0 +1,140 @@
+{% extends "base.html" %}
+
+{% block assignment %}
+<!--    Name: Bryant Hanks
+        Assignment: CS336 Assignment #10
+        Created:12/11/2022
+        Description: Registration for the conference -->
+{% endblock %}
+
+{% block head %}
+  <meta content="register, sign, up, join"
+        name="keywords"/>
+  <meta content="Register to join the conference"
+        name="description"/>
+  <meta content="Bryant Hanks"
+        http-equiv="author"/>
+  <meta content="nofollow"
+        name="robots"/>
+  <meta charset="UTF-8">
+  <title>Registration</title>
+  <link href="static/css/webdefault.css" rel="stylesheet" type="text/css">
+{% endblock %}}
+
+{% block main %}
+  <script src="static/js/webdefault.js"></script>
+  <!--<script src="database_code/registrationtable.py"></script>-->
+  <form id="reg" onsubmit="registrationValidation()" method="POST">
+    <p>Please register to join the conference</p>
+    <fieldset class="registration">
+      <label>Conference ID:</label><input name="confid" onchange="fillIn()" pattern = "[0-9]{6}" placeholder="123456" required="required"
+                                          title="Conference ID" type="text"><br>
+      <label for="title">Title:</label>
+      <select name="title" id="title">
+        <option></option>
+        <option>Mr.</option>
+        <option>Ms.</option>
+        <option>Mrs.</option>
+      </select><br>
+      <label>First Name:</label><input name="firstname" pattern="[a-zA-Z]+" placeholder="First" required="required"
+                                       title="Your First Name(letters only)" type="text">
+                                      <!-- value="Bryant">--><br>
+      <label>Last Name:</label><input name="lastname" pattern="[a-zA-Z\-]+" placeholder="Last" required="required"
+                                      title="Your Last Name(letters only)" type="text">
+                                      <!--value="Hanks">--><br>
+      <label>Address Line 1:</label><input name="addy1" pattern="[a-zA-Z0-9\ \#]+" placeholder="123 Fake ST" required="required"
+                                           title="Your Address" type="text"
+                                           value="123 fake st"><br>
+      <label>Address Line 2:</label><input name="addy2" pattern="[a-zA-Z0-9\ \#]+"
+                                           title="Apartment Number" type="text"><br>
+      <label>City:</label><input name="city" pattern="[a-zA-Z\ ]+" placeholder="City" required="required"
+                                 title="Your City(letters only)" type="text" value="Aurora"><br>
+      <label for="state">State:</label>
+      <select id="state" name="state" size="1">
+        <option value="">Please select a state</option>
+        <option value="AK">AK</option>
+        <option value="AL">AL</option>
+        <option value="AR">AR</option>
+        <option value="AZ">AZ</option>
+        <option value="CA">CA</option>
+        <option value="CO">CO</option>
+        <option value="CT">CT</option>
+        <option value="DC">DC</option>
+        <option value="DE">DE</option>
+        <option value="FL">FL</option>
+        <option value="GA">GA</option>
+        <option value="HI">HI</option>
+        <option value="IA">IA</option>
+        <option value="ID">ID</option>
+        <option value="IL">IL</option>
+        <option value="IN">IN</option>
+        <option value="KS">KS</option>
+        <option value="KY">KY</option>
+        <option value="LA">LA</option>
+        <option value="MA">MA</option>
+        <option value="MD">MD</option>
+        <option value="ME">ME</option>
+        <option value="MI">MI</option>
+        <option value="MN">MN</option>
+        <option value="MO">MO</option>
+        <option value="MS">MS</option>
+        <option value="MT">MT</option>
+        <option value="NC">NC</option>
+        <option value="ND">ND</option>
+        <option value="NE">NE</option>
+        <option value="NH">NH</option>
+        <option value="NJ">NJ</option>
+        <option value="NM">NM</option>
+        <option value="NV">NV</option>
+        <option value="NY">NY</option>
+        <option value="OH">OH</option>
+        <option value="OK">OK</option>
+        <option value="OR">OR</option>
+        <option value="PA">PA</option>
+        <option value="RI">RI</option>
+        <option value="SC">SC</option>
+        <option value="SD">SD</option>
+        <option value="TN">TN</option>
+        <option value="TX">TX</option>
+        <option value="UT">UT</option>
+        <option value="VA">VA</option>
+        <option value="VT">VT</option>
+        <option value="WA">WA</option>
+        <option value="WI">WI</option>
+        <option value="WV">WV</option>
+        <option value="WY">WY</option>
+      </select><br>
+      <label>Zip Code:</label><input name="zip" pattern="[0-9]{5}" placeholder="12345" required="required"
+                                     title="Your 5 digit zip code(numbers only)" type="text" value="80017"><br>
+      <label>Telephone:</label><input name="tele" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="999-999-9999" required="required"
+                                      title="XXX-XXX-XXXX numbers only)" type="tel"
+                                      value="303-333-3333"><br>
+      <label>Email Address:</label><input name="email" placeholder="Email@Email.com" required="required"
+                                          title="Your email address"
+                                          type="email" value="email@email.com"><br>
+    </fieldset>
+    <fieldset class="registrationcompany">
+      <label>Position:</label><input name="position" pattern="[a-zA-Z0-9\s]+" placeholder="Position" required="required"
+                                     title="Your title at your company" type="text"
+                                     value="Student"><br>
+      <label>Name of Company:</label><input name="company" pattern="[a-zA-Z0-9\s]+" placeholder="Company"
+                                            required="required"
+                                            title="company" type="text" value="Regis"><br>
+    </fieldset>
+    <fieldset class="registrationworkshop">
+      <label>Session 1:<br></label>
+      <input id="a1" name="day1" type="radio" value="a1"> <label for="a1">Effective Listener</label><br>
+      <input id="b1" name="day1" type="radio" value="b1"> <label for="b1">Difficult Conversations</label><br>
+      <input id="c1" name="day1" type="radio" value="c1"> <label for="c1">Different Personalities</label><br>
+      <label>Session 2:<br></label>
+      <input id="a2" name="day2" type="radio" value="a2"> <label for="a2">Effective Tools</label><br>
+      <input id="b2" name="day2" type="radio" value="b2"> <label for="b2">Proper Planning</label><br>
+      <input id="c2" name="day2" type="radio" value="c2"> <label for="c2">Value of Project Management</label><br>
+      <label>Session 3:<br></label>
+      <input id="a3" name="day3" type="radio" value="a3"> <label for="a3">Benefits of a Balanced Life</label><br>
+      <input id="b3" name="day3" type="radio" value="b3"> <label for="b3">Techniques to Balance Life</label><br>
+      <input id="c3" name="day3" type="radio" value="c3"> <label for="c3">Personal Life Management</label><br>
+      <input name="submit" type="submit" value="Submit">
+    </fieldset>
+  </form>
+{% endblock %}

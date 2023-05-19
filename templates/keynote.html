@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+
+{% block assignment %}
+<!--    Name: Bryant Hanks
+        Assignment: CS336 Assignment #10
+        Created:12/11/2022
+        Description: Info on keynote speakers -->
+{% endblock %}
+
+{% block head %}
+    <meta name = "keywords"
+          content = "keynote, speakers, orator"/>
+    <meta name = "description"
+          content = "Information about our keynote speakers"/>
+    <meta http-equiv = "author"
+          content = "Bryant Hanks"/>
+    <meta name = "robots"
+          content = "nofollow"/>
+    <meta charset="UTF-8">
+    <title>Keynote Speakers</title>
+    <link href="static/css/webdefault.css" rel="stylesheet" type="text/css">
+{% endblock %}
+
+{% block main %}
+    <div class="horizontalsection">
+        <div class="column"><img src="static/img/mra.jpg" width="300" height="300" alt="Mr. A"/><br>
+        Mr. A<br>
+        40 years as a corporate CEO, author of many books about communication
+        </div>
+        <div class="column"><img src="static/img/msb.jpg" width="300" height="299" alt="Ms. B"/><br>
+        Ms. B<br>
+        25 years in HR, 15 years as project manager, built and sold a sales company<br><br>
+        </div>
+    </div>
+{% endblock %}

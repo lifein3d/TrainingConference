@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+
+{% block assignment %}
+<!--    Name: Bryant Hanks
+        Assignment: CS336 Assignment #10
+        Created:12/11/2022
+        Description: Page to take the poll for which award to give out -->
+{% endblock %}
+
+{% block head %}
+    <meta name = "keywords"
+          content = "poll, vote, voting"/>
+    <meta name = "description"
+          content = "Poll to determine which award will be raffled out"/>
+    <meta http-equiv = "author"
+          content = "Bryant Hanks"/>
+    <meta name = "robots"
+          content = "nofollow"/>
+    <meta charset="UTF-8">
+    <title>Award Voting</title>
+    <link href="static/css/webdefault.css" rel="stylesheet" type="text/css">
+{% endblock %}
+<script src="static/js/webdefault.js"></script>
+
+<body onload="voteLoad()">
+  <header>
+    <nav>
+      <ul>
+        <li><a href="{{ url_from('awards') }}">awards</a></li>
+      </ul>
+    </nav>
+  </header>
+
+{% block main %}
+    <form id="pollform" onsubmit="poll()" method="get">
+        <fieldset class="poll">
+            <label>Please Select The Preferred Award</label><br>
+            <input id="p1" name="award" type="radio" value="Pen #1" required> <label for="p1">Pen #1</label><span></span><br>
+            <input id="p2" name="award" type="radio" value="Pen #2" required> <label for="p2">Pen #2</label><span></span><br>
+            <input id="p3" name="award" type="radio" value="Pen #3" required> <label for="p3">Pen #3</label><span></span><br>
+            <input name="submit" type="submit" value="Submit">
+        </fieldset>
+    </form>
+{% endblock %}

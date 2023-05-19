@@ -1,0 +1,62 @@
+{% extends "base.html" %}
+
+{% block assignment %}
+<!--    Name: Bryant Hanks
+        Assignment: CS336 Assignment #8
+        Created:11/27/2022
+        Description: Information page for what award should be given out -->
+{% endblock %}
+
+{% block head %}
+    <meta name = "keywords"
+          content = "awards, award, prize, prizes"/>
+    <meta name = "description"
+          content = "Description of the potential prize"/>
+    <meta http-equiv = "author"
+          content = "Bryant Hanks"/>
+    <meta name = "robots"
+          content = "nofollow"/>
+    <meta charset="UTF-8">
+    <title>Award Descriptions</title>
+    <link href="static/css/webdefault.css" rel="stylesheet" type="text/css">
+{% endblock %}
+
+{% block main %}
+    <form id="pollform" onsubmit="" method="POST">
+        <fieldset class="poll">
+            <label>Please Select The Preferred Award</label><br>
+            <input id="p1" name="award" type="radio" value="Pen #1" required> <label for="p1">Pen #1</label><span></span><br>
+            <input id="p2" name="award" type="radio" value="Pen #2" required> <label for="p2">Pen #2</label><span></span><br>
+            <input id="p3" name="award" type="radio" value="Pen #3" required> <label for="p3">Pen #3</label><span></span><br>
+            <input name="submit" type="submit" value="Submit">
+        </fieldset>
+    </form>
+    <h1>{{ vr }}</h1>
+    <br>
+    <table>
+      <tr>
+        <th>Entry</th>
+        <th>Title</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <th><img src="static/img/pen1.jpg" alt="Pen" width="300" height="200"/></th>
+        <td>Pen #1</td>
+        <td>Classic style of Fountain Pen. Granite style coloring<br>
+        with gold accents and easy grip neck.</td>
+      </tr>
+      <tr>
+        <th><img src="static/img/pen2.jpg" alt="Pen" width="300" height="199"/></th>
+        <td>Pen #2</td>
+        <td>Modern style of Fountain Pen. Sleek silver and black coloring<br>
+          with nickel accents and easy grip neck.</td>
+      </tr>
+      <tr>
+        <th><img src="static/img/pen3.jpg" alt="Pen" width="300" height="200"/></th>
+        <td>Pen #3</td>
+        <td>Rustic style of Fountain Pen. wood style exterior<br>
+          with gold accents and easy grip neck.</td>
+      </tr>
+    </table>
+    <br>
+{% endblock %}

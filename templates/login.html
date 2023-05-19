@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+
+{% block assignment %}
+<!--    Name: Bryant Hanks
+        Assignment: CS336 Assignment #10
+        Created:12/11/2022
+        Description: login to be taken to admin page -->
+{% endblock %}
+
+{% block head %}
+    <meta name = "keywords"
+          content = "login, access, account"/>
+    <meta name = "description"
+          content = "login to get to administration page"/>
+    <meta http-equiv = "author"
+          content = "Bryant Hanks"/>
+    <meta name = "robots"
+          content = "nofollow"/>
+    <meta charset="UTF-8">
+    <title>Login</title>
+    <link href="static/css/webdefault.css" rel="stylesheet" type="text/css">
+{% endblock %}
+
+{% block main %}
+    <form id="login" onsubmit="" method="POST">
+        <fieldset class="poll">
+            <label>Please Enter:<br>
+                Username and Password</label><br>
+            <input id="username" name="username" type="text" placeholder="Username" required> <label for="username"></label><span></span><br>
+            <input id="password" name="password" type="text" placeholder="Password" required> <label for="password"></label><span></span><br>
+            <input name="submit" type="submit" value="Submit">
+        </fieldset>
+        <div class="loginfailed">
+            {{ msg }}
+        </div>
+    </form>
+{% endblock %}

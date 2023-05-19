@@ -1,0 +1,40 @@
+/*
+    Name: Bryant Hanks
+    Assignment: CS336 Assignment #7
+    Created: 11/20/2022
+    Description: CSS file for nametags
+ */
+
+.page{
+    margin: 15mm 15mm 30mm 30mm;
+    page-break-after: always;
+}
+
+.row{
+    display: block;
+    min-width: 152mm;
+    min-height: 50mm;
+    text-align: center;
+}
+
+.nameTag{
+    display: inline-block;
+    width: 76mm;
+    height: 50mm;
+}
+
+p{
+    color:red;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+p+p{
+    color: green;
+    font-size: 12px;
+    font-weight: normal;
+}
+
+p+p+p{
+    color: black;
+}

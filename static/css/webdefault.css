@@ -1,0 +1,70 @@
+/*
+    Name: Bryant Hanks
+    Assignment: CS336 Assignment #5b
+    Created: 11/13/2022
+    Description: CSS file for website
+ */
+.registration {
+    height: 250px;
+    width: 400px;
+}
+
+.registration:hover{
+    background-color: darkgray;
+    font-size: large;
+}
+
+.registrationcompany {
+    height: 40px;
+    width: 400px;
+}
+
+.registrationcompany:hover{
+    background-color: darkgray;
+    font-size: large;
+}
+
+.registrationworkshop {
+    height: 275px;
+    width: 400px;
+}
+
+.registrationworkshop:hover{
+    background-color: darkgray;
+    font-size: large;
+}
+
+.poll{
+    height: 100px;
+    width: 225px;
+}
+
+.horizontalsection {
+    clear: both;
+    width: 100%;
+    text-align: center;
+}
+.column {
+    display: block;
+    float:left;
+    text-align: center;
+    width: 49%;
+}
+
+@media screen and (max-width: 480px){
+    .column {margin: 1% 0 1% 0%; width: 100%;}
+}
+
+.scheduletable {
+    text-align: left;
+    border-spacing: 15px;
+}
+
+.rowbold{
+    font-weight:bold;
+}
+
+.loginfailed{
+    font-weight:bold;
+    color:red;
+}

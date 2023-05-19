@@ -1,0 +1,53 @@
+{% extends "base.html" %}
+
+{% block assignment %}
+<!--    Name: Bryant Hanks
+        Assignment: CS336 Assignment #10
+        Created:12/11/2022
+        Description: Available Meals page -->
+{% endblock %}
+
+{% block head %}
+    <meta content="food, meal, eat"
+          name="keywords"/>
+    <meta content="Desciption of provided food and costs"
+          name="description"/>
+    <meta content="Bryant Hanks"
+          name="author"/>
+    <meta content="nofollow"
+          name="robots"/>
+    <meta charset="UTF-8">
+    <title>Conference Meals</title>
+    <link href="static/css/webdefault.css" rel="stylesheet" type="text/css">
+    <meta content="width=device-width, initial-scale=1" name="viewport"/>
+{% endblock %}
+
+{% block main %}
+    <div class="horizontalsection">
+        <div class="column">
+            <p><img alt="Burger" class="colcenter" height="137" src="static/img/burger.png" width="150"></p>
+            <p>Menu Day 1</p>
+            <p class="rowbold">Breakfast</p>
+            <p>Rolls, Fruit, Coffee</p>
+            <p class="rowbold">Lunch</p>
+            <p>Sandwiches, Tea, Water</p>
+            <p class="rowbold">Dinner</p>
+            <p>Burger, Salad, Wine</p>
+        </div>
+        <div class="column">
+            <p><img alt="Burger" class="colcenter" height="137" src="static/img/chicken.png" width="150"></p>
+            <p>Menu Day 2</p>
+            <p class="rowbold"> Breakfast</p>
+            <p> Rolls, Fruit, Coffee</p>
+            <p class="rowbold"> Lunch</p>
+            <p> Sandwiches, Tea, Water</p>
+            <p class="rowbold"> Dinner</p>
+            <p> Chicken, Salad, Wine</p>
+
+        </div>
+    </div>
+    <div class="horizontalsection">
+        <p>Full Meal Package: $250.00 (includes Dinner Day 2)</p>
+        <p>Dinner Day 2: $75.00</p>
+    </div>
+{% endblock %}

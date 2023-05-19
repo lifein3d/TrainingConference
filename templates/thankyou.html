@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+
+{% block assignment %}
+<!--    Name: Bryant Hanks
+        Assignment: CS336 Assignment #10
+        Created:12/11/2022
+        Description: Thank you for Registering page-->
+{% endblock %}
+
+{% block head %}
+    <meta name = "keywords"
+          content = "thank, you"/>
+    <meta name = "description"
+          content = "Confirmation and thanks for registering"/>
+    <meta http-equiv = "author"
+          content = "Bryant Hanks"/>
+    <meta name = "robots"
+          content = "nofollow"/>
+    <meta charset="UTF-8">
+    <title>Thank You!</title>
+    <link href="static/css/webdefault.css" rel="stylesheet" type="text/css">
+{% endblock %}
+
+{% block main %}
+    <h1>
+      Thank you for registering!
+    </h1>
+<h3>
+    Registered on: {{ regdte }}<br>
+    Name: {{ title }}  {{ firstname }}  {{ lastname }}<br>
+    Address: {{ addy1 }} {{ addy2 }} {{ city }} {{ state }} {{ zip }}<br>
+    Telephone: {{ telephone }}<br>
+    Email: {{ email }}<br>
+    Profession: {{ position }} at {{ company }}<br>
+    Day 1: {{ day1 }}<br>
+    Day 2: {{ day2 }}<br>
+    Day 3: {{ day3 }}<br>
+</h3>
+{% endblock %}

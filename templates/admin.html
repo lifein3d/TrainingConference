@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block assignment %}
+<!--    Name: Bryant Hanks
+        Assignment: CS336 Assignment #10
+        Created:12/11/2022
+        Description: administration page -->
+{% endblock %}
+
+{% block head %}
+    <meta name = "keywords"
+          content = "admin, administration"/>
+    <meta name = "description"
+          content = "where admins login to administrate"/>
+    <meta http-equiv = "author"
+          content = "Bryant Hanks"/>
+    <meta name = "robots"
+          content = "nofollow"/>
+    <meta charset="UTF-8">
+    <title>Administration</title>
+    <link href="static/css/webdefault.css" rel="stylesheet" type="text/css">
+{% endblock %}
+
+{% block main %}
+    <a href="{{ url_for('nametags10gen') }}" target="_blank">NameTag Generator</a>
+{% endblock %}

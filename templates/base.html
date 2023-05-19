@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+{% block assignment %}
+{# <!--    Name: Bryant Hanks #}
+{#        Assignment: CS336 Assignment #8 #}
+{#        Created:11/27/2022 #}
+{#        Description: base html page --> #}
+{% endblock %}
+<html lang="en">
+<head>
+    {% block head %}
+    {% endblock %}
+</head>
+
+<body>
+  <header>
+    <nav>
+      <ul>
+        {% block nav %}
+        {% include 'nav.html' %}
+        {% endblock %}
+      </ul>
+    </nav>
+  </header>
+  <main>
+    {% block main %}
+    {% endblock %}
+  </main>
+  <footer>
+    <address>
+      <p><small>Mailing address: 3333 Regis Blvd, Denver, CO 80221</small></p>
+      <p><small>While this website was created to satisfy the requirement of<br>
+        building a website for an academic course at Regis University, the<br>
+        views and opinions expressed on this website are solely those of<br>
+        the original author and	do not necessarily represent the views and<br>
+        opinions of Regis University.</small></p>
+      <p><small>Telephone number: (800)-388-2366</small></p>
+      <p><small>Email Address: <a href="mailto:bhanks001@regis.edu">bhanks001@regis.edu</a></small></p>
+    </address>
+  </footer>
+</body>
+</html>
